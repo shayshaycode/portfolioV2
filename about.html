@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Mobile-first viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Instructional Design Portfolio</title>
+  <!-- Shared styles -->
+  <link rel="stylesheet" href="css/main.css">
+  <!-- About page specific styles -->
+  <link rel="stylesheet" href="css/about.css">
+  <!-- Bootstrap (leave these links) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="/index.html">
+          <img src="images/logo.svg" alt="Noah Schaffer's Logo">
+        </a>
+      </div>
+      <!-- Mobile navigation toggle -->
+      <button id="menu-toggle" aria-label="Toggle Navigation">
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html" class="homebtn">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="contact.html" class="contact-btn">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="hero reveal2">
+      <div class="hero-content reveal">
+        <h1>More About Me</h1>
+        <p>Instructional Designer & Educator</p>
+      </div>
+    </section>
+    
+    <!-- About Content Section -->
+    <section id="about-me" class="about-me">
+      <div class="container stagger">
+        <!-- First stagger item: headshot -->
+        <div class="stagger-item">
+          <img
+            src="images/headshot.png"
+            alt="Headshot of [Your Name]"
+            class="about-headshot reveal"
+          >
+        </div>
+        <!-- Second stagger item: about text -->
+        <div class="stagger-item">
+          <div class="about-text reveal">
+            <h2>Bio</h2>
+            <p>
+              As an experienced educator with a dynamic background in both psychology and business management,
+              my career journey has taken me from the vibrant classrooms of Singapore to diverse international
+              landscapes like Morocco, Switzerland, and Taiwan. My global experiences have enriched my teaching
+              approach, allowing me to bring a unique perspective to education.
+            </p>
+            <p>
+              Over the past few years, I have been passionate about integrating e-learning into my courses,
+              leveraging technology to create immersive and engaging learning experiences. I am a proficient coder,
+              holding various certifications that attest to my technical skills. My expertise extends beyond the
+              classroom, having collaborated with numerous clients to develop bespoke courses and innovative
+              instructional materials.
+            </p>
+            <p>
+              Born and raised in the sunny state of Florida, I have a deep love for surfing, hiking, and exploring
+              the great outdoors. These activities not only provide me with a sense of adventure but also inspire my
+              creativity and problem-solving abilities.
+            </p>
+            <p>
+              I am always on the lookout for my next challenge, constantly learning, and thinking of new ways to
+              creatively address problems using design and technology. My goal is to continue growing my expertise
+              and to work harder than the rest to achieve excellence in instructional design.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="qualifications" class="qualifications">
+      <div class="container stagger">
+        <!-- Stagger item for the section title -->
+        <div class="stagger-item">
+          <h2 class="section-title reveal">QUALIFICATIONS</h2>
+        </div>
+        <!-- Optional: if you want a subtitle -->
+        <div class="stagger-item">
+          <p class="section-subtitle reveal">My Degrees</p>
+        </div>
+        <!-- Qualifications Cards Container -->
+        <div class="qualifications-cards">
+          <!-- First Qualification Card -->
+          <div class="stagger-item">
+            <div class="qualification-card reveal">
+              <div class="icon">
+                <img src="images/fsu.png" alt="Bachelor's in Social Sciences">
+              </div>
+              <h3>Bachelor's in Social Sciences</h3>
+              <p>
+                Earned from Florida State University, this degree provided a strong foundation in social research,
+                critical thinking, and educational practices.
+              </p>
+            </div>
+          </div>
+          <!-- Second Qualification Card -->
+          <div class="stagger-item">
+            <div class="qualification-card reveal">
+              <div class="icon">
+                <img src="images/fsucoe.png" alt="MEd in Curriculum and Instruction">
+              </div>
+              <h3>MEd in Curriculum and Instruction</h3>
+              <p>
+                Obtained from Florida State University, this degree advanced my expertise in designing impactful
+                learning experiences and curriculum development.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="certifications" class="certifications">
+      <div class="container stagger">
+        <!-- Stagger item for the section title -->
+        <div class="stagger-item">
+          <h2 class="section-title reveal">CERTIFICATIONS</h2>
+        </div>
+        <!-- Stagger item for the carousel -->
+        <div class="stagger-item">
+          <div id="certificationCarousel" class="carousel slide reveal" data-ride="carousel">
+            <div class="carousel-inner">
+            <!-- First slide -->
+            <div class="carousel-item active">
+              <div class="certification-card">
+                <img src="images/hbsCSML.jpg" alt="Instructional Design Certificate">
+                <h2>Certificate of School Management &amp; Leadership</h2>
+                <p>Issued by Harvard Graduate School of Business</p>
+                <h3>Explored strategy, finance, and organisational leadership for managing innovative schools.</h3>
+              </div>
+            </div>
+
+            <!-- Second slide -->
+            <div class="carousel-item">
+              <div class="certification-card">
+                <img src="images/webdesigncert.jpg" alt="Advanced eLearning Certificate">
+                <h2>Responsive Web Design Certification</h2>
+                <p>Issued by FreeCodeCamp</p>
+                <h3>Learned responsive HTML & CSS, accessibility, mobile-first design, and visual layout techniques.</h3>
+              </div>
+            </div>
+
+            <!-- Third slide -->
+            <div class="carousel-item">
+              <div class="certification-card">
+                <img src="images/javascripcert.png" alt="Digital Education Certificate">
+                <h2>JavaScript &amp; Data Structures Certificate</h2>
+                <p>Issued by FreeCodeCamp</p>
+                <h3>Mastered JavaScript fundamentals, algorithms, problem solving, and dynamic programming concepts.</h3>
+              </div>
+            </div>
+
+            <!-- Fourth slide -->
+            <div class="carousel-item">
+              <div class="certification-card">
+                <img src="images/udemy.png" alt="Advanced eLearning Certificate">
+                <h2>Instructional Design Certificate</h2>
+                <p>Issued by Udemy</p>
+                <h3>Developed skills in curriculum design, learning objectives, assessment planning, and course development tools.</h3>
+              </div>
+            </div>
+
+            <!-- Fifth slide -->
+            <div class="carousel-item">
+              <div class="certification-card">
+                <img src="images/udemy.png" alt="Digital Education Certificate">
+                <h2>Articulate Storyline 360 Certificate</h2>
+                <p>Issued by Udemy</p>
+                <h3>Learned to create interactive modules, branching scenarios, quizzes, and SCORM-compliant eLearning experiences.</h3>
+              </div>
+            </div>
+
+            </div>
+            <!-- Navigation controls -->
+            <div class="carousel-nav">
+              <a class="carousel-control-prev" href="#certificationCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#certificationCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="philosophy" class="philosophy">
+      <div class="container stagger">
+        <!-- Section Title -->
+        <div class="stagger-item">
+          <h2 class="section-title reveal" style="text-align: center;">
+            Learning Philosophy
+          </h2>
+        </div>
+        <div class="philosophy-content">
+          <!-- Center Image -->
+          <div class="philosophy-center stagger-item reveal">
+            <img src="images/philosophy.png" alt="Philosophy Diagram" />
+          </div>
+          <!-- Philosophy Item 1 -->
+          <div class="philosophy-item item1 stagger-item reveal">
+            <h3>Dual-Process Synergy</h3>
+            <p>
+              I integrate dual-process theory into my designs, engaging both intuitive and analytical thinking.
+              This creates learning experiences that are accessible yet intellectually robust.
+            </p>
+          </div>
+          <!-- Philosophy Item 2 -->
+          <div class="philosophy-item item2 stagger-item reveal">
+            <h3>Gamified Engagement</h3>
+            <p>
+              I infuse game mechanics and interactive challenges to make learning fun and motivating. This approach
+              boosts participation and helps learners retain and apply new skills.
+            </p>
+          </div>
+          <!-- Philosophy Item 3 -->
+          <div class="philosophy-item item3 stagger-item reveal">
+            <h3>Simplicity in Design</h3>
+            <p>
+              I embrace minimalism—removing unnecessary complexity to create clean, intuitive interfaces. This focus
+              on simplicity ensures that learners stay centered on core concepts.
+            </p>
+          </div>
+          <!-- Philosophy Item 4 -->
+          <div class="philosophy-item item4 stagger-item reveal">
+            <h3>Innovative Tools</h3>
+            <p>
+              By leveraging the latest, industry-leading tools and technologies, I push the boundaries of
+              instructional design. This keeps the learning experience current, dynamic, and transformative.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="work-experience" class="work-experience">
+      <div class="container stagger">
+        <!-- Section Title -->
+        <div class="stagger-item">
+          <h2 class="section-title reveal" style="text-align: center; margin-top: 60px; color: var(--secondary-color);">
+            WORK EXPERIENCE
+          </h2>
+        </div>
+        <div class="timeline">
+          <!-- Timeline Item 1: Date on left -->
+          <div class="stagger-item timeline__component">
+            <div class="timeline__date timeline__date--right reveal">2019</div>
+          </div>
+          <!-- Connector -->
+          <div class="stagger-item timeline__middle"></div>
+          <!-- Timeline Item 2: Event details (Published First Video) -->
+          <div class="stagger-item timeline__component timeline__component--bg">
+            <h2 class="timeline__title reveal">International Teaching in Morocco</h2>
+            <p class="timeline__paragraph reveal">
+              Straight out of my Master's program, I embarked on an enriching international teaching experience
+              in Morocco. Teaching subjects like Psychology, History, and Philosophy, I was fortunate to lead
+              my department and assume various leadership roles. This experience was pivotal for both my
+              professional and personal growth, shaping my approach to education and deepening my understanding
+              of diverse cultural perspectives.
+            </p>
+          </div>
+          <!-- Timeline Item 3: Event details (5,000 Subscribers Q&A) -->
+          <div class="stagger-item timeline__component timeline__component--bg">
+            <h2 class="timeline__title reveal">Mountain Guiding in Switzerland</h2>
+            <p class="timeline__paragraph reveal">
+              As the Mountain Leadership Coordinator at a prestigious boarding school in Switzerland, I guided
+              students through a transformative three-month program of mountain climbing and outdoor education.
+              Leading expeditions in the Swiss Alps, I developed training modules that combined physical
+              endurance, environmental science, and survival skills. This experience fostered resilience
+              and teamwork, and solidified my belief in the power of hands-on learning.
+            </p>
+          </div>
+          <!-- Connector -->
+          <div class="stagger-item timeline__middle"></div>
+          <!-- Timeline Item 4: Date on right -->
+          <div class="stagger-item timeline__component">
+            <div class="timeline__date timeline__date reveal date-delete">2022</div>
+          </div>
+          <!-- Timeline Item 7: Date in between -->
+          <div class="stagger-item timeline__component">
+            <div class="timeline__date timeline__date--right reveal">2023</div>
+          </div>
+          <!-- Connector -->
+          <div class="stagger-item timeline__middle"></div>
+          <!-- Timeline Item 6: Event details (First Live Stream) -->
+          <div class="stagger-item timeline__component timeline__component--bg">
+            <h2 class="timeline__title reveal">Tech-focused in Singapore</h2>
+            <p class="timeline__paragraph reveal">
+              Teaching in Singapore allowed me to push the boundaries of using technology in education.
+              With access to a wealth of resources, I engaged students in lessons and projects using
+              digital media and interactive platforms. This approach not only enhanced their learning
+              experience but also prepared them for a rapidly evolving digital world. Incorporating tools
+              such as virtual simulations, multimedia presentations, and collaborative online projects,
+              I witnessed firsthand the transformative power of technology in fostering student engagement
+              and understanding.
+            </p>
+          </div>
+          <!-- Timeline Item 2: Event details (Published First Video) -->
+          <div class="stagger-item timeline__component timeline__component--bg">
+            <h2 class="timeline__title reveal">Instructional Design Foundations</h2>
+            <p class="timeline__paragraph reveal">
+              My journey into instructional design began in Singapore, where I earned certifications covering
+              learner analysis, instructional strategies, and the use of technology. Armed with this knowledge,
+              I developed engaging and effective courses that enhanced student achievement. Collaborating
+              with colleagues, I refined my skills and laid the foundation for my commitment to innovative
+              learning experiences.
+            </p>
+          </div>
+          <!-- Connector -->
+          <div class="stagger-item timeline__middle"></div>
+          <!-- Timeline Item 1: Date on left -->
+          <div class="stagger-item timeline__component">
+            <div class="timeline__date timeline__date reveal">2024</div>
+          </div>
+          <!-- Connector -->
+          <div class="stagger-item timeline__middle space-delete"></div>
+          <!-- Timeline Item 3: Event details (5,000 Subscribers Q&A) -->
+          <div class="stagger-item timeline__component timeline__component--bg">
+            <h2 class="timeline__title reveal">Freelance ID Projects</h2>
+            <p class="timeline__paragraph reveal">
+              In addition to my teaching roles, I have worked on freelance projects like GlowUp Edu, where
+              I developed programs in physical and health education. These initiatives empowered students
+              by incorporating health tracking tools, enabling them to monitor their progress and well-being.
+              This experience reinforced the importance of integrating technology into education to enhance
+              learning outcomes and promote holistic development.
+            </p>
+          </div>
+          <!-- Connector -->
+          <div class="stagger-item timeline__middle"></div>
+          <!-- Timeline Item 4: Date on right -->
+          <div class="stagger-item timeline__component"></div>
+          <!-- Timeline Item 7: Date in between -->
+          <div class="stagger-item timeline__component">
+            <div class="timeline__date timeline__date--right reveal">2025</div>
+          </div>
+          <!-- Connector -->
+          <div class="stagger-item timeline__middle"></div>
+          <!-- Timeline Item 6: Event details (First Live Stream) -->
+          <div class="stagger-item timeline__component timeline__component--bg">
+            <h2 class="timeline__title reveal">Wolf Drone Systems</h2>
+            <p class="timeline__paragraph reveal">
+              I developed a specialized course on Singapore Drone Regulations for Drone Wolf Systems,
+              tailored for drone pilots. The course includes interactive modules, case studies, and
+              assessments to ensure pilots operate within Singapore's strict regulatory environment.
+            </p>
+          </div>
+          <!-- Additional Date Item: Date on right -->
+          <div class="stagger-item timeline__component"></div>
+          <!-- Connector -->
+          <div class="stagger-item timeline__middle date-delete"></div>
+          <!-- Timeline Item 8: Final event (Vertical Timeline) -->
+          <div class="stagger-item timeline__component timeline__component--bottom timeline__component--bg">
+            <h2 class="timeline__title reveal">Beloved Bumps</h2>
+            <p class="timeline__paragraph reveal">
+              Collaborating with Beloved Bumps has been truly rewarding. I have helped transform their
+              prenatal classes into comprehensive online offerings, reaching expectant parents globally.
+            </p>
+          </div>
+          <!-- Additional Date Item: Date on right -->
+          <div class="stagger-item timeline__component"></div>
+          <!-- Connector -->
+          <div class="stagger-item timeline__middle date-delete"></div>
+          <!-- Duplicate Timeline Item 6: Event details (First Live Stream) -->
+          <div class="stagger-item timeline__component timeline__component--bg">
+            <h2 class="timeline__title reveal">More to come</h2>
+            <p class="timeline__paragraph reveal"></p>
+          </div>
+          <!-- Final Connector -->
+          <div class="stagger-item timeline__middle"></div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="contact" class="contact">
+      <div class="container stagger">
+        <!-- Stagger item for the section title -->
+        <div class="stagger-item">
+          <h2 class="reveal">Contact</h2>
+        </div>
+        <div class="row">
+          <!-- Stagger item for the contact form -->
+          <div class="col-12 col-md-6 stagger-item">
+            <form action="https://formspree.io/f/xyzedoej" method="POST">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required>
+            
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+            
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+            
+              <button type="submit" class="see-more-btn reveal">Send Message</button>
+            </form>
+          </div>
+          <!-- Stagger item for the social icons -->
+          <div class="col-12 col-md-6 stagger-item d-flex flex-row justify-content-center align-items-center">
+            <a href="mailto:noahschafferpro@outlook.com?subject=Instructional Design Inquiry&body=Hi Noah," class="m-2 reveal" title="Email">
+              <img src="images/email.png" alt="Email" style="width: 50px;">
+            </a>
+          
+            <!-- Phone -->
+            <a href="tel:+13524331340" class="m-2 reveal" title="Phone">
+              <img src="images/phone.png" alt="Phone" style="width: 50px;">
+            </a>
+          
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/noah-schaffer-a91883170" target="_blank" class="m-2 reveal" title="LinkedIn">
+              <img src="images/linkedin.png" alt="LinkedIn" style="width: 50px;">
+            </a>
+          
+            <!-- Vimeo -->
+            <a href="https://vimeo.com/user237019645" target="_blank" class="m-2 reveal" title="Vimeo">
+              <img src="images/vimeo.png" alt="Vimeo" style="width: 50px;">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  </main>
+  
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Noah Schaffer. All rights reserved.</p>
+    </div>
+  </footer>
+    <!-- Chat Widget -->
+    <div id="chat-widget">
+      <div id="chat-header" onclick="toggleChat()">💬 Ask About My Work</div>
+      <div id="chat-body">
+        <div id="chat-log"></div>
+        <input type="text" id="chat-input" placeholder="Ask a question..." onkeypress="handleKeyPress(event)">
+      </div>
+    </div>
+  
+  <!-- JavaScript (same as index.html) -->
+  <script src="js/main.js"></script>
+  <script src="js/viewbtn.js"></script>
+  <script src="js/chat-widget.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+          integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+          crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+          integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+          crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+          integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+          crossorigin="anonymous"></script>
+</body>
+</html>

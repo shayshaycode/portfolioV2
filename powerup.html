@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Mobile-first viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | Instructional Design Portfolio</title>
+    <!-- Shared styles -->
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- Portfolio page specific styles -->
+    <link rel="stylesheet" href="css/powerup.css" />
+    <!-- Bootstrap (leave these links) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/logo.svg" alt="Noah Schaffer's Logo" />
+          </a>
+        </div>
+        <!-- Mobile navigation toggle -->
+        <button id="menu-toggle" aria-label="Toggle Navigation">
+          <span class="hamburger"></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="index.html" class="homebtn">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="contact.html" class="contact-btn">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero reveal2">
+          <div class="hero-content reveal">
+            <h1>PowerUp - Gamification</h1>
+            <p>FullStack Development</p>
+          </div>
+        </section>
+
+<!-- Project Details Section -->
+<section class="project-details container py-5">
+  <div class="row">
+    <div class="col-md-4">
+      <ul class="project-info">
+        <li><strong>Client</strong><br>Independent Build</li>
+        <li><strong>Categories</strong><br>Instructional Design, Web Development, Game-Based Learning</li>
+        <li><strong>Year</strong><br>2024</li>
+        <li><strong>Attributes</strong><br>Full-Stack Development, Custom Database, Interactive Gameplay, Jeopardy-Style Format, Teacher-Created Content</li>
+      </ul>
+    </div>
+    <div class="col-md-8">
+      <h2>PowerUp Review Game</h2>
+      <p>
+        PowerUp is a fully custom-built, Jeopardy-style review game that empowers teachers to create interactive content for their students. Designed using full-stack development principles, it features a sleek interface, question board structure, and an integrated database for storing and managing custom games.
+      </p>
+      <p>
+        Built from the ground up using HTML, CSS, JavaScript, and backend technologies, PowerUp promotes in-class engagement while offering a flexible platform for formative assessment. While currently optimised for in-person use, its modular build leaves room for future enhancements like online multiplayer functionality.
+      </p>
+    </div>
+  </div>
+</section>
+  
+
+
+
+  <section class="image-hotspots container py-5">
+    <div class="hotspot-container">
+      <img src="images/powerup.png" alt="Project Screenshot" class="img-fluid hotspot-image">
+      
+      <div class="hotspot" data-info="Interactive Jeopardy-style board designed for reviewing content" style="top: 20%; left: 30%;"></div>
+      <div class="hotspot" data-info="Database for saving and managing custom game sets" style="top: 45%; left: 50%;"></div>
+      <div class="hotspot" data-info="Built with full-stack development tools and scalable backend" style="top: 30%; left: 69%;"></div>
+    </div>
+  
+    <div id="hotspot-info-box" class="info-box hidden"></div>
+  </section>
+  
+
+
+        <section id="contact" class="contact">
+            <div class="container stagger">
+              <!-- Stagger item for the section title -->
+              <div class="stagger-item">
+                <h2 class="reveal">Contact</h2>
+              </div>
+              <div class="row">
+                <!-- Stagger item for the contact form -->
+                <div class="col-12 col-md-6 stagger-item">
+                  <form action="https://formspree.io/f/xyzedoej" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                  
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                  
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                  
+                    <button type="submit" class="see-more-btn reveal">Send Message</button>
+                  </form>
+                </div>
+                <!-- Stagger item for the social icons -->
+                <div class="col-12 col-md-6 stagger-item d-flex flex-row justify-content-center align-items-center">
+                  <!-- Email -->
+                  <a href="mailto:noahschafferpro@outlook.com?subject=Instructional Design Inquiry&body=Hi Noah," class="m-2 reveal" title="Email">
+                    <img src="images/email.png" alt="Email" style="width: 50px;">
+                  </a>
+
+                  <!-- Phone -->
+                  <a href="tel:+13524331340" class="m-2 reveal" title="Phone">
+                    <img src="images/phone.png" alt="Phone" style="width: 50px;">
+                  </a>
+
+                  <!-- LinkedIn -->
+                  <a href="https://www.linkedin.com/in/noah-schaffer-a91883170" target="_blank" class="m-2 reveal" title="LinkedIn">
+                    <img src="images/linkedin.png" alt="LinkedIn" style="width: 50px;">
+                  </a>
+
+                  <!-- Vimeo -->
+                  <a href="https://vimeo.com/user237019645" target="_blank" class="m-2 reveal" title="Vimeo">
+                    <img src="images/vimeo.png" alt="Vimeo" style="width: 50px;">
+                  </a>
+                </div>
+              </div>
+            </div>
+    
+  
+    </main>
+    
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Noah Schaffer. All rights reserved.</p>
+      </div>
+    </footer>
+      <!-- Chat Widget -->
+  <div id="chat-widget">
+    <div id="chat-header" onclick="toggleChat()">💬 Ask About My Work</div>
+    <div id="chat-body">
+      <div id="chat-log"></div>
+      <input type="text" id="chat-input" placeholder="Ask a question..." onkeypress="handleKeyPress(event)">
+    </div>
+  </div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/viewbtn.js"></script>
+    <script src="js/hotspot.js"></script>
+    <script src="js/chat-widget.js"></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+  
