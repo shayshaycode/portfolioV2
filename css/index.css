@@ -1,0 +1,583 @@
+/* index.css */
+
+/* Hero Section - Full-Screen Centered and Fixed */
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  max-width: 100%; /* Prevents horizontal overflow */
+  background: url('../images/indexheroBG.png') no-repeat center center/cover;
+  color: #fff;
+  padding: 20px;
+  overflow: hidden; /* Prevents content from spilling out */
+}
+
+/* Dark overlay to improve readability */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Dark overlay */
+  z-index: 1;
+}
+
+/* Content inside hero */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 90%;
+  width: 100%;
+  text-align: center;
+}
+
+/* Ensuring text does not overflow */
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  word-wrap: break-word;
+  max-width: 100%;
+}
+
+/* Subtitle */
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  max-width: 100%;
+}
+
+/* Buttons container */
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Prevents overflow */
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Hero Buttons */
+.hero-buttons .btn {
+  display: inline-block;
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 50px;
+  text-decoration: none;
+  white-space: nowrap; /* Prevents text wrapping */
+  transition: all 0.3s ease-in-out;
+}
+
+/* Primary button - "See My Work" */
+.btn-primary {
+  background: var(--primary-color) !important;
+  color: white !important;
+  border: none !important;
+}
+
+.btn-primary:hover {
+  background: var(--accent-color) !important;
+  color: var(--secondary-color) !important;
+  transform: translateY(-5px) !important;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Secondary button - "Book a Meeting" */
+.btn-secondary {
+  background: transparent !important;
+  color: white !important;
+  border: 2px solid white !important;
+}
+
+.btn-secondary:hover {
+  background: white !important;
+  color: var(--primary-color) !important;
+  transform: translateY(-5px) !important;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  .hero h1 {
+      font-size: 2rem;
+  }
+  
+  .hero p {
+      font-size: 1rem;
+  }
+
+  .hero-buttons {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .hero-buttons .btn {
+      width: 90%;
+      text-align: center;
+  }
+}
+
+/* ==========================
+   SERVICES SECTION
+========================== */
+.services {
+  background: var(--accent-color);
+  text-align: left;
+  padding: 60px 20px;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: var(--secondary-color);
+}
+
+/* Service Cards Grid */
+.service-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Individual Service Card */
+.service-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.3s, box-shadow 0.3s;
+  min-height: 380px;
+
+}
+
+/* Hover Effect */
+.service-card:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15) !important;
+  background-color: #fff;
+  
+}
+
+/* Icon Styling */
+.service-card .icon img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 15px;
+}
+
+/* Service Title */
+.service-card h3 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+/* Service Description */
+.service-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .service-cards {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .service-cards {
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* Center the third service card on medium screens */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .service-cards .stagger-item:nth-child(3) {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .service-cards .stagger-item:nth-child(3) .service-card {
+    max-width: 500px; /* or whatever width fits nicely */
+    width: 100%;
+  }
+}
+
+
+
+
+/* ==========================
+   RECENT WORK SECTION
+========================== */
+.recent-work {
+  background: var(--background-color);
+  text-align: center;
+  padding: 0px 20px;
+}
+
+.recent-work .section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  margin-bottom: 40px;
+}
+
+/* Project Cards */
+.projects {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Individual Project Card */
+.project-card {
+  background: #1a1a1a;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  min-height: 260px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out !important;
+}
+
+/* Hover Effect: Scale Up & Add Box Shadow */
+.project-card:hover {
+  transform: translateY(-5px) scale(1.03) !important; /* Slight lift */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3) !important; /* Soft shadow */
+}
+
+/* Image Container */
+.project-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+/* Project Image */
+.project-image img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Overlay Hover Effect */
+.project-image .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* View Button */
+.view-btn {
+  background: #b91c1c;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.project-image:hover .overlay {
+  opacity: 1;
+}
+
+.view-btn:hover {
+  background: #ff0044;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+/* Project Title */
+.project-card h3 {
+  font-size: 1.2rem;
+  color: white;
+  margin-top: 15px;
+}
+
+/* Responsive Grid */
+@media (min-width: 768px) {
+  .projects {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .projects .stagger-item:nth-child(3) {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .projects .stagger-item:nth-child(3) .project-card {
+    max-width: 500px;
+    width: 100%;
+  }
+}
+
+
+
+/* ==========================
+   SEE MORE BUTTON
+========================== */
+.see-more-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.see-more-btn {
+  background: #b91c1c;
+  color: white;
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.see-more-btn:hover {
+  background: #ff0044;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  color: #1a1a1a;
+  text-decoration: none;
+
+}
+
+/* ==========================
+   TESTIMONIALS SECTION
+========================== */
+.testimonials {
+  background: var(--accent-color);
+  text-align: center;
+  padding: 60px 20px;
+}
+/* Ensure the carousel maintains a consistent height */
+.carousel-inner {
+  min-height: 300px; /* Adjust this value as needed */
+}
+
+.testimonials .section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  margin-bottom: 40px;
+}
+
+/* Carousel container (Bootstrap carousel) */
+.carousel {
+  max-width: 800px; /* Limit carousel width if desired */
+  margin: 0 auto;
+}
+
+/* Testimonial Card */
+.testimonial-card {
+  background: var(--secondary-color);
+  color: white;
+  min-height: 300px; /* Ensure all cards are at least 300px tall */
+  padding: 30px;
+  padding-left: 20%;
+  padding-right: 20%;
+  border-radius: 10px;
+  text-align: canter;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+  margin: 0 10px; /* Adds a 15px gap on the left and right */
+  width: calc(100% - 20px); /* Adjust the width to account for the margins */
+}
+
+.testimonial-text {
+  font-size: 1.4rem;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.testimonial-author {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+@media (max-width: 576px) {
+  .testimonial-card {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .testimonial-text {
+    font-size: 1rem;
+  }
+
+  .testimonial-author {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* Navigation Arrows Placed Below the Carousel */
+.carousel-nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Override default Bootstrap arrow positioning */
+.carousel-control-prev,
+.carousel-control-next {
+  position: static;
+  width: auto;
+  height: auto;
+  transform: none;
+  margin: 0 10px;
+}
+
+/* Optional: customize the arrow icons for a consistent look */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  border-radius: 50%;
+  padding: 10px;
+}
+
+
+
+
+
+  /* Container for consistent section padding */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  
+  /* Section styling */
+  section {
+    margin-bottom: 2rem;
+  }
+  section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Projects grid layout for a clean, modern presentation */
+  .projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .project {
+    background: var(--secondary-color);
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  /* Contact form styling */
+#contact {
+  background: #fff;
+  color: var(--secondary-color);
+}
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  input, textarea {
+    padding: 0.75rem;
+    border: .5px solid var(--primary-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    max-width: 30rem;
+    background-color: var(--accent-color);
+    }
+  #contact form button[type="submit"] {
+    background: #b91c1c;
+    color: white;
+    max-width: 12rem;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    border: none; /* Remove any default border */
+    cursor: pointer;
+    display: block;
+    margin: 5 auto;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+  
+  #contact form button[type="submit"]:hover {
+    background: #ff0044;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    color: #1a1a1a;
+  }
+  
+  
+
+  
+  /* Responsive adjustments */
+  @media (min-width: 768px) {
+    #hero h1 {
+      font-size: 3rem;
+    }
+    #hero p {
+      font-size: 1.5rem;
+    }
+    .projects {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (min-width: 1024px) {
+    .projects {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  

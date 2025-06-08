@@ -1,0 +1,615 @@
+/* Hero Section - Full-Screen Centered and Fixed */
+.hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    max-width: 100%; /* Prevents horizontal overflow */
+    background: url('../images/weekwithoutwalls.png') no-repeat center center/cover;
+    background-size: 170%;
+    color: #fff;
+    padding: 20px;
+    overflow: hidden; /* Prevents content from spilling out */
+  }
+  
+  /* Dark overlay to improve readability */
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    z-index: 1;
+  }
+  
+  /* Content inside hero */
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 90%;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Ensuring text does not overflow */
+  .hero h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    word-wrap: break-word;
+    max-width: 100%;
+  }
+  
+  /* Subtitle */
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+  
+  /* Buttons container */
+  .hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Prevents overflow */
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  /* Hero Buttons */
+  .hero-buttons .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 50px;
+    text-decoration: none;
+    white-space: nowrap; /* Prevents text wrapping */
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Primary button - "See My Work" */
+  .btn-primary {
+    background: var(--primary-color) !important;
+    color: white !important;
+    border: none !important;
+  }
+  
+  .btn-primary:hover {
+    background: var(--accent-color) !important;
+    color: var(--secondary-color) !important;
+    transform: translateY(-5px) !important;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15) !important;
+  }
+  
+  /* Secondary button - "Book a Meeting" */
+  .btn-secondary {
+    background: transparent !important;
+    color: white !important;
+    border: 2px solid white !important;
+  }
+  
+  .btn-secondary:hover {
+    background: white !important;
+    color: var(--primary-color) !important;
+    transform: translateY(-5px) !important;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15) !important;
+  }
+  
+  /* Responsive Fixes */
+  @media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+  
+    .hero-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+  
+    .hero-buttons .btn {
+        width: 90%;
+        text-align: center;
+    }
+  }
+  @media (max-width: 768px) {
+    .hero {
+      background-size: cover !important; /* Ensures full coverage on mobile */
+      background-position: center !important; /* Center the image if needed */
+    }
+  }
+  
+
+  /* About Me Section */
+
+  #about-me {
+    background: #fff;
+  }
+.about-me .container {
+    /* Mobile: stacked (image above text) */
+    display: block;
+    text-align: center; 
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  
+  /* Headshot styles */
+  .about-headshot {
+    max-width: 300px;       
+    border-radius: 50%;     
+    margin-bottom: 1.5rem;  
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Adds a soft shadow */
+  }
+  
+  
+  /* About text container */
+  .about-text {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    color: var(--secondary-color);
+  }
+  
+  /* Desktop: side by side */
+  @media (min-width: 768px) {
+    .about-me .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: left;  /* So text aligns left on wider screens */
+      gap: 2rem;         /* Space between image & text */
+    }
+    
+    .about-headshot {
+      margin-bottom: 0; /* Remove the mobile spacing */
+      max-width: 80%;
+    }
+  }
+/* ==========================
+   QUALIFICATIONS SECTION
+========================== */
+.qualifications {
+    background: var(--accent-color);
+    text-align: left;
+    padding: 60px 20px;
+  }
+  
+  .qualifications .section-title {
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+  }
+  
+  .qualifications .section-subtitle {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: var(--secondary-color);
+  }
+  
+  /* Qualifications Cards Grid */
+  .qualifications-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Individual Qualification Card */
+  .qualification-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+    min-height: 350px;
+    align-items: center;
+
+  }
+  
+  /* Hover Effect */
+  .qualification-card:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15) !important;
+    background-color: #fff;
+  }
+  
+  /* Icon Styling */
+  .qualification-card .icon img {
+    width: 50%;
+    height: 25%;
+    margin-bottom: 30px;
+  }
+  
+  /* Qualification Title */
+  .qualification-card h3 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+  }
+  
+  /* Qualification Description */
+  .qualification-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  /* Responsive Design */
+  @media (min-width: 768px) {
+    .qualifications-cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+/* ==========================
+   CERTIFICATIONS SECTION
+========================== */
+.certifications {
+    background: var(--light-green);
+    text-align: center;
+    padding: 60px 20px;
+  }
+  
+  /* Ensure the carousel maintains a consistent height */
+  .certifications .carousel-inner {
+    min-height: 300px; /* Adjust this value as needed */
+  }
+  
+  .certifications .section-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    margin-bottom: 40px;
+  }
+  
+  /* Carousel container (Bootstrap carousel) */
+  .certifications .carousel {
+    max-width: 800px !important; /* Limit carousel width if desired */
+    margin: 0 auto;
+  }
+  
+  /* Certification Card */
+  .certification-card {
+    align-items: center;
+    gap: 20px;
+    background: #fff;
+    text-align: center !important;
+    color: var(--secondary-color);
+    min-height: 450px !important; /* Ensure all cards are at least 300px tall */
+    padding: 30px;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-radius: 10px;
+    text-align: center; /* Adjusted from 'canter' to 'center' */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    margin: 0 10px; /* Gap on the left and right */
+    width: calc(100% - 20px); /* Adjust the width to account for the margins */
+    min-height: 550px !important;
+  }
+  .certification-card img {
+    min-width: 80px !important;
+    max-width: 200px !important;
+    margin: 0 auto 15px;
+    display: block;
+  }
+  
+  .certification-text {
+    font-size: 1rem !important;
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+  
+  .certification-author {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  
+  /* Navigation Arrows Placed Below the Carousel */
+  .certifications .carousel-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  /* Override default Bootstrap arrow positioning */
+  .certifications .carousel-control-prev,
+  .certifications .carousel-control-next {
+    position: static;
+    width: auto;
+    height: auto;
+    transform: none;
+    margin: 0 10px;
+  }
+  
+  /* Optional: Customize the arrow icons for a consistent look */
+  .certifications .carousel-control-prev-icon,
+  .certifications .carousel-control-next-icon {
+    padding: 10px;
+    background-color: var(--light-green) !important;
+    border-radius: 50%;
+  }
+  
+/* Mobile-first Timeline Styles */
+
+
+.timeline {
+    margin: 0 auto;
+    padding: 25px;
+    /* Default to block layout (stacked) on mobile */
+    display: block;
+    font-family: var(--font-family);
+    color: var(--secondary-color);
+  }
+  .work-experience .section-title {
+    text-align: center;
+    margin-top: 50px;  /* Increase this value as needed for extra gap */
+    margin-bottom: 30px;
+    color: var(--secondary-color);
+  }
+  
+  /* Each timeline component and connector gets vertical spacing */
+  .timeline__component,
+  .timeline__middle {
+    margin-bottom: 20px;
+  }
+  
+  /* Event details boxes with background */
+  .timeline__component--bg {
+    padding: 1.5em;
+    background: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
+  
+  /* Middle connectors on mobile: you might simply center the point */
+  .timeline__middle {
+    position: relative;
+    height: 30px; /* Set a fixed height for the connector area */
+    background: transparent;
+    text-align: center;
+  }
+  
+
+  
+  /* Dates: default left aligned on mobile */
+  .timeline__date {
+    font-size: 1em;
+    color: var(--primary-color);
+    text-align: left;
+  }
+  
+  /* Right aligned dates: if needed, add a modifier */
+  .timeline__date--right {
+    text-align: right;
+    color: var(--primary-color);
+  }
+  
+  /* Titles and paragraphs */
+  .timeline__title {
+    margin: 0;
+    font-size: 1.15em;
+    font-weight: bold;
+  }
+  
+  .timeline__paragraph {
+    line-height: 1.5;
+  }
+  
+  /* -----------------------
+     Larger Screens (Desktop)
+     Convert to grid layout
+  ------------------------- */
+  @media (min-width: 768px) {
+    .timeline {
+      max-width: 1000px;
+      display: grid;
+      grid-template-columns: 1fr 3px 1fr;
+      gap: 20px;
+    }
+    
+    /* Ensure components have consistent margins in grid */
+    .timeline__component {
+      margin: 0 20px 20px 20px;
+    }
+    
+    /* For dates that need right alignment */
+    .timeline__date--right {
+      text-align: right;
+    }
+    
+    /* Adjust middle connector height if needed */
+    .timeline__middle {
+      height: auto;
+      background: #ffffff;
+    }
+    
+    /* Position the timeline point in the middle column */
+    .timeline__point {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  @media (max-width: 767px) {
+    .timeline__date,
+    .timeline__date--right {
+      text-align: center;
+      font-size: 3rem;
+    }
+  }
+  @media (max-width: 767px) {
+    .date-delete {
+      display: none;
+    }
+  }
+  @media (min-width: 767px) {
+    .space-delete {
+      display: none;
+    }
+  }
+  /* Philosophy Section Container */
+.philosophy {
+  background: #fff; /* Or another color */
+  padding: 60px 20px;
+  text-align: center;
+  color: var(--secondary-color);
+}
+
+/* Container for center image + 4 items */
+.philosophy-content {
+  position: relative;
+  display: block; /* Mobile-first: stacked */
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 40px; /* Space between title & content */
+}
+
+/* Center Image */
+.philosophy-center img {
+  width: 300px;  /* Adjust as needed */
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%; /* If you want it circular */
+}
+
+/* Boxes around the image */
+.philosophy-item {
+  background: var(--accent-color); /* Light background for contrast */
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px; /* Adjust as needed */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* Headings and text inside each box */
+.philosophy-item h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.philosophy-item p {
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+/* Desktop Layout (min-width: 768px) */
+@media (min-width: 768px) {
+  .philosophy-content {
+    /* Use grid for the 4 boxes around the center image */
+    display: grid;
+    grid-template-areas:
+      "box1 center box2"
+      "box3 center box4";
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: auto auto;
+    gap: 30px;
+    align-items: center; /* Vertically center the items */
+    justify-content: center;
+    position: relative;
+  }
+
+  .philosophy-center {
+    grid-area: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Place each item in a grid area */
+  .item1 {
+    grid-area: box1;
+    margin: 0; /* Let grid handle spacing */
+  }
+  .item2 {
+    grid-area: box2;
+    margin: 0;
+  }
+  .item3 {
+    grid-area: box3;
+    margin: 0;
+  }
+  .item4 {
+    grid-area: box4;
+    margin: 0;
+  }
+
+  .philosophy-item {
+    max-width: 500px; /* Slightly smaller for desktop if needed */
+  }
+
+  /* Center image can be bigger on desktop if you want */
+  .philosophy-center img {
+    width: 300px; /* Adjust as needed */
+    max-width: 100%;
+  }
+}
+  /* Contact form styling */
+  #contact {
+    background: #fff;
+    color: var(--secondary-color);
+    padding-top: 4rem;
+  }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    input, textarea {
+      padding: 0.75rem;
+      border: .5px solid var(--primary-color);
+      border-radius: 4px;
+      font-size: 1rem;
+      max-width: 30rem;
+      background-color: var(--accent-color);
+      }
+    #contact form button[type="submit"] {
+      background: #b91c1c;
+      color: white;
+      max-width: 12rem;
+      padding: 12px 25px;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.3s ease-in-out;
+      border: none; /* Remove any default border */
+      cursor: pointer;
+      display: block;
+      margin: 5 auto;
+      margin-bottom: 2rem;
+      margin-top: 2rem;
+    }
+    
+    #contact form button[type="submit"]:hover {
+      background: #ff0044;
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      color: #1a1a1a;
+    }
+.certification-card h3 {
+  font-size: 1rem;
+}
+  

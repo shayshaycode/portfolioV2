@@ -1,0 +1,257 @@
+/* Hero Section - Full-Screen Centered and Fixed */
+.hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    max-width: 100%; /* Prevents horizontal overflow */
+    background: url('../images/project1phone.png') no-repeat center center/cover;
+    background-size: 170%;
+    color: #fff;
+    padding: 20px;
+    overflow: hidden; /* Prevents content from spilling out */
+  }
+  
+  /* Dark overlay to improve readability */
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    z-index: 1;
+  }
+  
+  /* Content inside hero */
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 90%;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Ensuring text does not overflow */
+  .hero h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    word-wrap: break-word;
+    max-width: 100%;
+  }
+  
+  /* Subtitle */
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+  
+  /* Buttons container */
+  .hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Prevents overflow */
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  /* Hero Buttons */
+  .hero-buttons .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 50px;
+    text-decoration: none;
+    white-space: nowrap; /* Prevents text wrapping */
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Primary button - "See My Work" */
+  .btn-primary {
+    background: var(--primary-color) !important;
+    color: white !important;
+    border: none !important;
+  }
+  
+  .btn-primary:hover {
+    background: var(--accent-color) !important;
+    color: var(--secondary-color) !important;
+    transform: translateY(-5px) !important;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15) !important;
+  }
+  
+  /* Secondary button - "Book a Meeting" */
+  .btn-secondary {
+    background: transparent !important;
+    color: white !important;
+    border: 2px solid white !important;
+  }
+  
+  .btn-secondary:hover {
+    background: white !important;
+    color: var(--primary-color) !important;
+    transform: translateY(-5px) !important;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15) !important;
+  }
+  
+  /* Responsive Fixes */
+  @media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+  
+    .hero-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+  
+    .hero-buttons .btn {
+        width: 90%;
+        text-align: center;
+    }
+  }
+  @media (max-width: 768px) {
+    .hero {
+      background-size: cover !important; /* Ensures full coverage on mobile */
+      background-position: center !important; /* Center the image if needed */
+    }
+  }
+
+
+
+    /* Contact form styling */
+    #contact {
+        background: #fff;
+        color: var(--secondary-color);
+        padding-bottom: 5rem;
+      }
+        form {
+          gap: 1rem;
+        }
+        input, textarea {
+          padding: 0.75rem;
+          border: .5px solid var(--primary-color);
+          border-radius: 4px;
+          font-size: 1rem;
+          max-width: 60rem;
+          background-color: var(--accent-color);
+          }
+        #contact form button[type="submit"] {
+          background: #b91c1c;
+          color: white;
+          max-width: 12rem;
+          padding: 12px 25px;
+          font-size: 1rem;
+          font-weight: bold;
+          border-radius: 50px;
+          text-decoration: none;
+          transition: all 0.3s ease-in-out;
+          border: none; /* Remove any default border */
+          cursor: pointer;
+          display: block;
+          margin: 5 auto;
+          margin-bottom: 2rem;
+          margin-top: 2rem;
+        }
+        
+        #contact form button[type="submit"]:hover {
+          background: #ff0044;
+          transform: translateY(-5px);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+          color: #1a1a1a;
+        }
+        .contact-form {
+            width: 90%;
+            max-width: 800px;
+            margin: 0 auto;
+            font-family: var(--font-family);
+            text-align: left;
+          }
+          
+          
+          
+          .contact-form label {
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin-top: 1rem;
+
+          }
+          
+          .contact-form input[type="text"],
+          .contact-form input[type="email"],
+          .contact-form input[type="tel"],
+          .contact-form textarea {
+            padding: 0.75rem;
+            border: none;
+            border-radius: 6px;
+            background-color: #f2f2f2;
+            width: 100%;
+            font-size: 1rem;
+          }
+          
+          .contact-form textarea {
+            resize: vertical;
+          }
+          
+          .checkbox-group {
+            display: block;
+          }
+          
+          
+          .checkbox-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+          }
+          
+          .optional-text {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 1rem;
+          }
+          
+          .contact-btn {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 0.8rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto 0 auto; /* centers the button */
+            transition: background-color 0.3s ease;
+          }
+          
+          .contact-btn:hover {
+            background-color: var(--secondary-color);
+          }
+          .form-wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+          }
+          
+          .contact-form {
+            width: 100%;
+            max-width: 800px;
+            padding: 2rem;
+            box-sizing: border-box;
+            text-align: left;
+          }
+          
